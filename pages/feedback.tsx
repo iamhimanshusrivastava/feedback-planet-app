@@ -3,7 +3,7 @@ import { prisma } from "../lib/prisma";
 import { Feedback, FeedbackType } from ".prisma/client";
 import Link from "next/link";
 
-export default function FeedbackPage({ feedback }) {
+export default function FeedbackPage({ feedback: any }) {
   const formatFeedbackType = (feedback: FeedbackType) => {
     switch (feedback) {
       case "FEEDBACK":
