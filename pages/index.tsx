@@ -21,7 +21,7 @@ export default function Home() {
         method: "POST",
       });
     } catch (error) {
-      throw new Error(error);
+      throw new Error(error + "Error");
     }
   };
   const onSubmit = async (data) => {
@@ -38,7 +38,7 @@ export default function Home() {
         }
       );
     } catch (error) {
-      toast.error(error);
+      toast.error(error + "Error");
     }
   };
 
