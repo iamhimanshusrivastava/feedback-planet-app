@@ -3,8 +3,8 @@ import { prisma } from "../lib/prisma";
 import { Feedback, FeedbackType } from ".prisma/client";
 import Link from "next/link";
 
-export default function FeedbackPage({ feedback: any }) {
-  const formatFeedbackType = (feedback: FeedbackType) => {
+export default function FeedbackPage({ feedback }) {
+  const formatFeedbackType = (feedback) => {
     switch (feedback) {
       case "FEEDBACK":
         return "bg-green-500 text-green-800";
@@ -60,7 +60,7 @@ export default function FeedbackPage({ feedback: any }) {
                       </tr>
                     </thead>
                     <tbody className="bg-gray-700 divide-y divide-gray-500">
-                      {feedback.map((item: Feedback) => (
+                      {feedback.map((item) => (
                         <tr key={item.id}>
                           <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-white">
                             {item.name}
